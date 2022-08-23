@@ -1,7 +1,20 @@
-import React from 'react';
+import React, { Fragment } from 'react';
 
 const ErrorExample = () => {
-  return <h2>useState error example</h2>;
+  let title = 'Title - Failed';
+
+  const handleOnClick = () => {
+    title = 'Title - Success';
+    console.log({title});
+  }
+  return (
+    <React.Fragment>
+      <div>
+        <h2>{title}</h2>
+        <button type='button' className='btn' onClick={handleOnClick}>Click</button>
+      </div>
+    </React.Fragment>
+  )
 };
 
 export default ErrorExample;
