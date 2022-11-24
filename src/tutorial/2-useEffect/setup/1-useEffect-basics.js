@@ -8,8 +8,13 @@ const UseEffectBasics = () => {
   useEffect(()=> {
     console.log("useEffect called ....");
     document.title = `new Messages(${value})`;
-  })
+  },[value]);         //will run on initial render []  and also when value changes [value] only when used second parameter //
   
+  // useEffect(()=> {
+  //   console.log("useEffect called ....");
+  //   document.title = `new Messages(${value})`;
+  // },[]);
+
   return(
     <>
       <h1>{value}</h1>
